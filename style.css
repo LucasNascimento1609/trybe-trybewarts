@@ -43,3 +43,8 @@ main {
   display: flex;
   height: fit-content;
 }
+
+#label-family input {
+  display: flex;
+  flex-direction: column;
+}
