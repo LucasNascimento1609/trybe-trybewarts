@@ -17,7 +17,7 @@ sendBtn.addEventListener('click', loginTest)
 
 function teste() {
   if(checkBox.checked == true) {
-    btnEnviar.removeAttribute('disabled')
+    btnEnviar.toggleAttribute('disabled')
   }
 }
 
