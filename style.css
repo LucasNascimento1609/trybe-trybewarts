@@ -44,7 +44,8 @@ main {
   height: fit-content;
 }
 
-#label-family input {
+
+#chose-family {
   display: flex;
   flex-direction: column;
 }
