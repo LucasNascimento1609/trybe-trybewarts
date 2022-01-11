@@ -1,6 +1,8 @@
 const getEmail = document.querySelector('#loginEmail')
 const getPass = document.querySelector('#loginPass')
 const sendBtn = document.querySelector('.getBtn')
+const btnEnviar = document.querySelector('#submit-btn')
+const checkBox = document.querySelector('#agreement')
 
 function loginTest() {
   event.preventDefault()
@@ -12,3 +14,11 @@ function loginTest() {
 }
 
 sendBtn.addEventListener('click', loginTest)
+
+function teste() {
+  if(checkBox.checked == true) {
+    btnEnviar.removeAttribute('disabled')
+  }
+}
+
+checkBox.addEventListener('click', teste)
