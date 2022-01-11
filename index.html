@@ -4,34 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Projeto Trybewarts</title>
   </head>
   <body>
     <header class="header">
-      <img src="/images/trybewarts-header-logo.svg" alt="Marca da Trybe" class="trybewarts-header-logo">
+      <img
+        src="/images/trybewarts-header-logo.svg"
+        alt="Marca da Trybe"
+        class="trybewarts-header-logo"
+      />
       <h1 id="trybewarts-header-title">Trybewarts</h1>
       <form action="" method="get" class="trybewarts-login">
-          <label for="loginEmail">
-            <input type="email" name="email" id="loginEmail" placeholder="Email">
-          </label>
-          <label for="loginPass">
-            <input type="password" name="password" id="loginPass" placeholder="Senha">
-          </label>
-          <button type="submit" class="getBtn">Entrar</button>
+        <label for="loginEmail">
+          <input
+            type="email"
+            name="email"
+            id="loginEmail"
+            placeholder="Email"
+          />
+        </label>
+        <label for="loginPass">
+          <input
+            type="password"
+            name="password"
+            id="loginPass"
+            placeholder="Senha"
+          />
+        </label>
+        <button type="submit" class="getBtn">Entrar</button>
       </form>
     </header>
 
-  <main id="teste">
-    Casa:
-    <select name="selectHouse" id="house">
-      <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-      <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-      <option value="Corvinode" id="corvinode-house">Corvinode</option>
-      <option value="Pytherina" id="pytherina-house">Pytherina</option>
-    </select>
-  </main>
-
+    <main>
+        <form action="" method="get" id="evaluation-form">
+          <div id="name-lastname">
+          <label for="input-name">
+            <input type="text" id="input-name" placeholder="Nome" />
+          </label>
+          <label for="input-lastname">
+            <input type="text" id="input-lastname" placeholder="Sobrenome" />
+          </label>
+      </div>
+      <div id="email-house">
+        <label for="input-email">
+          <input
+            type="email"
+            name="email"
+            id="input-email"
+            placeholder="Email"
+          />
+        </label>
+          Casa:
+          <select name="selectHouse" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+      </form>
+      </div>
+      <img
+        src="./images/trybewarts-colored.svg"
+        alt="Logo Trybewarts"
+        id="trybewarts-forms-logo"
+      />
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
