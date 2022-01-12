@@ -4,8 +4,8 @@ const sendBtn = document.querySelector('.getBtn');
 const btnEnviar = document.querySelector('#submit-btn');
 const checkBox = document.querySelector('#agreement');
 
-function loginTest() {
-  preventDefault();
+function loginTest(event) {
+  event.preventDefault();
   if (getEmail.value === 'tryber@teste.com' && getPass.value === '123456') {
     alert('Olá, Tryber!');
   } else {
@@ -16,7 +16,7 @@ function loginTest() {
 sendBtn.addEventListener('click', loginTest);
 
 function teste() {
-    btnEnviar.toggleAttribute('disabled');
+  btnEnviar.toggleAttribute('disabled');
 }
 
 checkBox.addEventListener('click', teste);
