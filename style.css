@@ -1,11 +1,9 @@
-#evaluation-form {
-  display: flex;
-  flex-direction: column;
-  width: 675px;
-}
-
 .header {
   background-color: rgb(50, 167, 145);
+  display: flex;
+}
+
+.trybewarts-login {
   display: flex;
 }
 
@@ -13,15 +11,26 @@ main {
   display: flex;
 }
 
-#name-lastname-section {
-  display: flex;
-}
-
 #trybewarts-forms-logo {
   height: 500px;
 }
 
-.trybewarts-login {
+#evaluation-form {
   display: flex;
+  flex-direction: column;
+  width: 675px;
+}
+
+#name-lastname-section {
+  display: flex;
+}
+
+#email-house-section {
+  display: flex;
+}
+
+.family-options {
+  display: flex;
+  flex-direction: column;
 }
 
