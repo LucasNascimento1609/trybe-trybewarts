@@ -13,6 +13,10 @@ main {
   display: flex;
 }
 
+#name-lastname-section {
+  display: flex;
+}
+
 #trybewarts-forms-logo {
   height: 500px;
 }
