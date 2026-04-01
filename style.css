@@ -34,3 +34,14 @@ main {
   flex-direction: column;
 }
 
+.rate-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rate-options {
+  display: flex;
+  gap: 10px;
+}
+
