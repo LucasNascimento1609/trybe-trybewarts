@@ -12,82 +12,87 @@
     <h1 id="trybewarts-header-title">Trybewarts</h1>
     <form action="" class="trybewarts-login">
       <label for="email">
-        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="email" class="input-data" name="email" id="email" placeholder="Email">
       </label>
       <label for="password">
         <input type="password" name="password" id="password" placeholder="Senha">
       </label>
-      <button type="submit" id="login-button">Entrar</button>
+      <button type="submit" id="login-button" class="btn-main">Entrar</button>
     </form>
   </header>
 
   <main>
     <form id="evaluation-form">
-      <section id="name-lastname-section">
+      <section id="name-lastname-section" class="form-row">
         <label for="input-name">
           Nome: 
-          <input type="text" name="name" id="input-name" placeholder="Nome">
+          <input type="text" class="input-data" name="name" id="input-name" placeholder="Nome">
         </label>
         <label for="input-lastname">
           Sobrenome: 
-          <input type="text" name="lastname" id="input-lastname" placeholder="Sobrenome">
+          <input type="text" class="input-data" name="lastname" id="input-lastname" placeholder="Sobrenome">
         </label>
       </section>
 
-      <section id="email-house-section">
+      <section id="email-house-section" class="form-row">
         <label for="input-email">
           Email: 
-          <input type="email" name="email" id="input-email" placeholder="Email">
+          <input type="email" name="email" id="input-email" placeholder="Email" class="input-data">
         </label>
-          <select name="select-house" id="house">
+
+        <label for="house">
+          Casa:
+          <select name="select-house" id="house" class="input-data">
+            <option value="" disabled selected hidden>Escolha sua casa</option>
             <option value="Gitnória" id="gitnoria-house">Gitnória</option>
             <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
             <option value="Corvinode" id="corvinode-house">Corvinode</option>
             <option value="Pytherina" id="pytherina-house">Pytherina</option>
           </select>
+        </label>
       </section>
 
       <label id="label-family">Qual sua família?</label>
       <div class="family-options">
         <label>
-          Frontend
           <input type="radio" name="family" value="Frontend">
+          Frontend
         </label>
         <label>
-          Backend
           <input type="radio" name="family" value="Backend">
+          Backend
         </label>
         <label>
-          FullStack
           <input type="radio" name="family" value="FullStack">
+          FullStack
         </label>
       </div>
 
       <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
-      <div>
+      <div class="content-options">
         <label>
-          HoFs
           <input type="checkbox" name="content" value="HoFs" class="subject">
+          HoFs
         </label>
         <label>
-          Jest
           <input type="checkbox" name="content" value="Jest" class="subject">
+          Jest
         </label>
         <label>
-          Promises
           <input type="checkbox" name="content" value="Promises" class="subject">
+          Promises
         </label>
         <label>
-          React 
           <input type="checkbox" name="content" value="React" class="subject">
+          React 
         </label>
         <label>
-          SQL
           <input type="checkbox" name="content" value="SQL" class="subject">
+          SQL
         </label>
         <label>
-          Python
           <input type="checkbox" name="content" value="Python" class="subject">
+          Python
         </label>
       </div>
 
@@ -139,7 +144,7 @@
       
       <section>
         <label class="textarea"> Deixe seu comentário: </label>
-        <textarea id="textarea" maxlength="500"></textarea>
+        <textarea id="textarea" maxlength="500" class="input-data"></textarea>
         <div id="counter">500</div>
       </section>
 
@@ -148,7 +153,7 @@
         <input type="checkbox" id="agreement">
       </section>
 
-      <button type="submit" id="submit-btn" disabled>Enviar</button>
+      <button type="submit" id="submit-btn" class="btn-main" disabled>Enviar</button>
 
     </form>
     <img src="images/trybewarts-colored.svg" alt="Trybewarts Colored Logo" id="trybewarts-forms-logo">
