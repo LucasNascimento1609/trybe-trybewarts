@@ -1,6 +1,12 @@
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const loginButton = document.getElementById('login-button');
+const checkboxAgreement = document.getElementById('agreement');
+const submitButton = document.getElementById('submit-btn');
+
+checkboxAgreement.addEventListener('change', () => {
+  submitButton.disabled = !checkboxAgreement.checked;
+});
 
 loginButton.addEventListener('click', (event) => {
   event.preventDefault();
