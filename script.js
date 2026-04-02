@@ -3,6 +3,13 @@ const passwordInput = document.getElementById('password');
 const loginButton = document.getElementById('login-button');
 const checkboxAgreement = document.getElementById('agreement');
 const submitButton = document.getElementById('submit-btn');
+const textarea = document.getElementById('textarea');
+const counter = document.getElementById('counter');
+
+textarea.addEventListener('input', () => {
+  const remainingCharacters = 500 - textarea.value.length;
+  counter.textContent = remainingCharacters;
+});
 
 checkboxAgreement.addEventListener('change', () => {
   submitButton.disabled = !checkboxAgreement.checked;
