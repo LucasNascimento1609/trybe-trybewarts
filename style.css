@@ -2,50 +2,238 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(222, 226, 230);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  display: flex;
   background-color: rgb(50, 167, 145);
-  justify-content: space-between;
+  display: flex;
   align-items: center;
-  height: 150px;
+  justify-content: space-between;
+  padding: 5px 30px;
+  color: white;
+}
+
+.trybewarts-header-logo {
+  max-width: 60px;
+}
+
+#trybewarts-header-title {
+  font-size: 1.8rem;
+  flex: 1;
+  text-align: center;
 }
 
 .trybewarts-login {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.trybewarts-header-logo {
-  width: 120px;
+.trybewarts-login label {
+  display: flex;
+  align-items: center;
+}
+
+.trybewarts-login input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgb(204, 204, 204);
+  height: 35px;
+  width: 150px;
+}
+
+.btn-main {
+  background-color: rgb(75, 25, 121);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: backgrouind-color 0.3s ease;
+}
+
+.trybewarts-login .btn-main {
+  padding: 0 15px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn-main:disabled {
+  background-color: rgb(204, 204, 204);
+  color: rgb(102, 102, 102);
+  cursor: not-allowed;
+}
+
+.btn-main:not( :disabled ):hover {
+  background-color: rgb(49, 16, 80);
 }
 
 main {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 20px;
+  gap: 40px;
+  flex: 1;
 }
 
 #evaluation-form {
-  width: 675px;
   display: flex;
   flex-direction: column;
+  width: 675px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-row label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-data {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 4px;
+}
+
+.family-options , .content-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+#label-family , #label-content {
+  display: block;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.rate-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid rgb(238, 238, 238);
+  padding-top: 10px;
+  margin-bottom: 25px;
+}
+
+#label-rate {
+  font-weight: 700;
+}
+
+.rate-options {
+  display: flex;
+  gap: 12px;
+}
+
+.textarea-container {
+  position: relative;
+}
+
+.textarea {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+#textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 2px solid rgb(120, 120, 120);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#textarea:focus {
+  outline: none;
+  border-color: rgb(50, 167, 145);
+  box-shadow: 0 0 5px rgba(50, 167, 145, 0.5);
+}
+
+#counter {
+  text-align: right;
+  font-size: 0.8rem;
+  color: rgb(102, 102, 102);
+}
+
+.agreement-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  width: 100%;
+}
+
+button:disabled {
+  background-color: rgb(204, 204, 204);
+  cursor: not-allowed;
 }
 
 #trybewarts-forms-logo {
   height: 500px;
+  flex-shrink: 0;
+  display: block;
 }
 
-#name-lastname {
-  display: flex;
-  flex-wrap: nowrap;
+@media ( max-width : 1100px ) {
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #trybewarts-forms-logo {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
-#email-house {
-  display: flex;
-  height: fit-content;
-}
+@media ( max-width : 700px ) {
 
+  #evaluation-form {
+    width: 95vw;
+  }
 
-#chose-family {
-  display: flex;
-  flex-direction: column;
+  #name-lastname-section , #email-house-section {
+    flex-direction: column;
+  }
 }
